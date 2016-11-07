@@ -1,0 +1,22 @@
+{
+  "name": "axs/omnipay-converge",
+  "type": "library",
+  "description": "Authorize.Net gateway for the Omnipay payment processing library",
+  "keywords": [
+    "myvirtualmerchant",
+    "converge",
+    "gateway",
+    "merchant",
+    "omnipay",
+    "pay",
+    "payment"
+  ],
+  "homepage": "",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": { "Omnipay\\Converge\\" : "src/" }
+  },
+  "require": {
+    "omnipay/common": "~2.0"
+  }
+}
