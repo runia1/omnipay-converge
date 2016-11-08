@@ -75,18 +75,15 @@ class Gateway extends AbstractGateway {
 	}
 
 	//TOKEN CARD methods
-	public function createCard($options) {
-
+	public function createCard(array $parameters = array()) {
+		return $this->createRequest('Omnipay\Converge\Message\CreateCardRequest', $parameters);
 	}
 
-	public function updateCard($options) {
-
+	public function updateCard(array $parameters = array()) {
+		return $this->createRequest('Omnipay\Converge\Message\UpdateCardRequest', $parameters);
 	}
 
-	public function deleteCard($options) {
-
+	public function deleteCard(array $parameters = array()) {
+		return $this->createRequest('Omnipay\Converge\Message\DeleteCardRequest', $parameters);
 	}
-
-
-
 }
