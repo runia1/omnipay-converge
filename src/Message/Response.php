@@ -73,9 +73,9 @@ class Response extends AbstractResponse  {
 	public function getMessage() {
 		if(!isset($this->data['ssl_result'])) {
 			return $this->data['errorMessage'];
-		} else if($this->data['ssl_reslut'] == 0) {
+		} else if($this->data['ssl_result'] == 0) {
 			return 'Your purchase was successful!';
-		} else if($this->data['ssl_reslut'] == 1) {
+		} else if($this->data['ssl_result'] == 1) {
 			return "AVS-".self::$avsResponse[$this->data['ssl_avs_response']] . "\nFUNDS-$".$this->data['ssl_account_balance'];
 		}
 	}
