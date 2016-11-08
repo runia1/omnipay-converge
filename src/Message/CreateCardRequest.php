@@ -30,4 +30,9 @@ class CreateCardRequest extends AbstractRequest {
 
 		return $baseData+$cardData+$purchaseData;
 	}
+
+	public function sendData($data) {
+		$httpResponse = $this->httpClient->post($this->getRequestEndpoint(), null, $data)->send();
+		return $this->response = new CreateCardResponse($this, $httpResponse->getBody());
+	}
 }
