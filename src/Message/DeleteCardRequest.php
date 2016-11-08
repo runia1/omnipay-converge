@@ -10,6 +10,8 @@ namespace Omnipay\Converge\Message;
 
 class DeleteCardRequest extends AbstractRequest {
 
+	public $successMessage = "Card Deleted Sucessfully!";
+
 	/**
 	 * Get the raw data array for this message. The format of this varies from gateway to
 	 * gateway, but will usually be either an associative array, or a SimpleXMLElement.

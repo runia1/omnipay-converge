@@ -70,11 +70,15 @@ class Response extends AbstractResponse  {
 		return $this->data['ssl_txn_id'];
 	}
 
+	public function getCardReference() {
+		return $this->data['ssl_token'];
+	}
+
 	public function getMessage() {
 		if(!isset($this->data['ssl_result'])) {
 			return $this->data['errorMessage'];
 		} else if($this->data['ssl_result'] == 0) {
-			return 'Your purchase was successful!';
+			return $this->request->successMessage;
 		} else if($this->data['ssl_result'] == 1) {
 			return "AVS-".self::$avsResponse[$this->data['ssl_avs_response']] . "\nFUNDS-$".$this->data['ssl_account_balance'];
 		}

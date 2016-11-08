@@ -15,6 +15,8 @@ namespace Omnipay\Converge\Message;
  */
 class CreateCardRequest extends AbstractRequest {
 
+	public $successMessage = "Card Added Sucessfully!";
+
 	/**
 	 * Get the raw data array for this message. The format of this varies from gateway to
 	 * gateway, but will usually be either an associative array, or a SimpleXMLElement.
@@ -29,10 +31,5 @@ class CreateCardRequest extends AbstractRequest {
 		);
 
 		return $baseData+$cardData+$purchaseData;
-	}
-
-	public function sendData($data) {
-		$httpResponse = $this->httpClient->post($this->getRequestEndpoint(), null, $data)->send();
-		return $this->response = new CreateCardResponse($this, $httpResponse->getBody());
 	}
 }
