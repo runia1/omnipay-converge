@@ -1,7 +1,7 @@
 {
   "name": "axs/omnipay-converge",
   "type": "library",
-  "description": "Authorize.Net gateway for the Omnipay payment processing library",
+  "description": "Converge gateway for the Omnipay payment processing library",
   "keywords": [
     "myvirtualmerchant",
     "converge",
