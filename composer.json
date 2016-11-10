@@ -1,5 +1,5 @@
 {
-  "name": "axs/omnipay-converge",
+  "name": "runia1/omnipay-converge",
   "type": "library",
   "description": "Converge gateway for the Omnipay payment processing library",
   "keywords": [
