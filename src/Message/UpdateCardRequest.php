@@ -22,7 +22,8 @@ class UpdateCardRequest extends AbstractRequest {
 		$baseData = $this->getBaseData(); //gateway credentials
 		$cardData = $this->getCardData(); //card data
 		$purchaseData = array (
-			'ssl_transaction_type' => "ccupdatetoken"
+			'ssl_transaction_type' => "ccupdatetoken",
+			'ssl_token' => $this->getCardReference()
 		);
 
 		return $baseData+$cardData+$purchaseData;
