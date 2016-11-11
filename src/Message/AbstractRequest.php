@@ -108,6 +108,10 @@ abstract class AbstractRequest extends BaseAbstractRequest {
 		}
 	}
 
+	public function getTransactionReference() {
+		return $this->getParameter('transactionReference');
+	}
+
 	public function sendData($data) {
 		$httpResponse = $this->httpClient->post($this->getRequestEndpoint(), null, $data)->send();
 		return $this->response = new Response($this, $httpResponse->getBody());
