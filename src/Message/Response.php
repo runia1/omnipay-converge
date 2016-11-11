@@ -83,5 +83,4 @@ class Response extends AbstractResponse  {
 			return "AVS-".self::$avsResponse[$this->data['ssl_avs_response']] . "\nFUNDS-$".$this->data['ssl_account_balance'];
 		}
 	}
-
 }
